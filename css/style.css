@@ -12,6 +12,16 @@
     box-sizing: border-box;
 }
 
+/* colors */
+:root {
+
+--paleBlue: hsl(225, 100%, 94%);
+--brightBlue: hsl(245, 75%, 52%);
+--verypaleBlue: hsl(228, 79%, 96%);
+--desaturatedBlue: hsl(224, 23%, 55%);
+--darkBlue: hsl(223, 47%, 23%);
+}
+
 body {
     font-family: 'Red Hat Display', sans-serif;
     background-image: url(../images/pattern-background-mobile.svg);
@@ -41,22 +51,32 @@ body {
 
 .card-body .title {
     font-weight: 900;
-    font-size: 0.6rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-size: 0.7rem;
+    margin: 20px 0;
 }
 
 .card-body .description {
     width: 75%;
     margin: 0 auto 20px;
-    font-size: 0.8rem;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: var(--desaturatedBlue);
 }
 
 .card-body .subscription-plan {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--verypaleBlue);
+}
+
+.card-body .subscription-plan .sub-description h5:nth-child(2) {
+    margin-top: 5px;
+    color: var(--desaturatedBlue);
 }
 
 .pay-buttons {
@@ -67,4 +87,18 @@ body {
     display: block;
     width: 80%;
     margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pay-buttons button:nth-child(1) {
+    background-color: var(--brightBlue);
+    color: var(--paleBlue);
+}
+
+.pay-buttons button:nth-child(2) {
+    color: var(--desaturatedBlue);
 }
