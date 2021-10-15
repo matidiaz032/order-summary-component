@@ -99,6 +99,35 @@ body {
     color: var(--paleBlue);
 }
 
+.pay-buttons button:nth-child(1):hover {
+    background-color: hsl(245, 81%, 60%);
+}
+
 .pay-buttons button:nth-child(2) {
     color: var(--desaturatedBlue);
+}
+
+.pay-buttons button:nth-child(2):hover {
+    background-color: var(--paleBlue);
+}
+
+/* desktop */
+@media (min-width: 720px) {
+    .card-container {
+        width: 50%;
+    }
+
+    .card-body .title {
+        font-size: 1rem;
+    }
+
+    .card-body .description {
+        width: 60%;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .pay-buttons button {
+        width: 70%;
+    }
 }
